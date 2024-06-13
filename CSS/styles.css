@@ -1,0 +1,67 @@
+#registro{
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 100%;
+}
+
+form{
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 400px;
+    gap: 20px;
+}
+
+form>.group{
+ display: flex;
+ flex-flow: row;
+ width: 100%;
+ gap: 20px;
+}
+
+form>.group>.inputgroup{
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.tac{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.paddingcomun{
+    padding: 20px;
+}
+
+.imgprincipal{
+    background-image: url("../Public/contructora.avif");
+    background-position: 100%;
+}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.Error {
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
