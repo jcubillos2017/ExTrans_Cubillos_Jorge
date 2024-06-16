@@ -1,4 +1,4 @@
-#registro{
+#registro {
     font-family: 'Times New Roman', Times, serif;
     display: flex;
     flex-flow: column nowrap;
@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-form{
+form {
     display: flex;
     flex-flow: column;
     width: 100%;
@@ -14,36 +14,38 @@ form{
     gap: 20px;
 }
 
-form>.group{
- display: flex;
- flex-flow: row;
- width: 100%;
- gap: 20px;
+form>.group {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    gap: 20px;
 }
 
-form>.group>.inputgroup{
+form>.group>.inputgroup {
     width: 100%;
     display: flex;
     flex-flow: column nowrap;
 }
-.tac{
+
+.tac {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
-.paddingcomun{
+
+.paddingcomun {
     padding: 20px;
 }
 
-.imgprincipal{
+.imgprincipal {
     background-image: url("../Public/contructora.avif");
     background-position: 100%;
 }
 
-h2{
+h2 {
     font-family: 'Times New Roman', Times, serif;
 }
 
-p{
+p {
     font-family: 'Times New Roman', Times, serif;
 }
 
@@ -51,17 +53,19 @@ p{
     color: red;
 }
 
+th {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
 
+td {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
 
+.footer-bottom_social {
+    padding: 1pt;
+    
+    
 
-
-
-
-
-
-
-
-
-
-
-
+}

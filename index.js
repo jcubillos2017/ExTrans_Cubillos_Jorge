@@ -50,11 +50,11 @@ createApp({
 
         }
 
-        function emailrepetido(email){
-            const array=usuarios.value
-            let yaexistemail=false
+        function emailrepetido(email) {
+            const array = usuarios.value
+            let yaexistemail = false
             array.forEach(usuario => {
-                if(email===usuario.email) yaexistemail=true
+                if (email === usuario.email) yaexistemail = true
             });
             return yaexistemail
         }
@@ -72,6 +72,8 @@ createApp({
             } else {
                 return false; // La persona es menor de edad
             }
+
+
         }
 
         function enviarFormulario(E) {
@@ -153,11 +155,26 @@ createApp({
                 cargo: cargovalido,
                 fechaIngreso: fechaIngresovalido,
                 fechaNacimiento: fechaNacimientovalido,
+
             }
             usuarios.value.push(usuario)
+
+            document.getElementById("botonmodal").click()
+
+            formulario.value.nombre = ""
+            formulario.value.apellido = ""
+            formulario.value.email = ""
+            formulario.value.cargo = ""
+            formulario.value.fechaIngreso = undefined
+            formulario.value.fechaNacimiento = undefined
+
+
+
+
+
         }
 
-        function eliminarregistro(index){
+        function eliminarregistro(index) {
             usuarios.value.splice(index, 1)
         }
 
@@ -171,6 +188,7 @@ createApp({
             guardarregistro,
             erroresformulario,
             eliminarregistro,
+
         }
     }
 }).mount('#app')

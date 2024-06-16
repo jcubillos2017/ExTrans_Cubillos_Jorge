@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRANSVERSAL</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/967a56d591.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="imgprincipal">
@@ -41,8 +42,10 @@
                         <td>{{usuario.nombre}} {{usuario.apellido}}</td>
                         <td>{{usuario.email}}</td>
                         <td>{{usuario.cargo}}</td>
-                        <td>{{usuario.fechaIngreso}}</td>
-                        <td><button v-on:click.prevent="eliminarregistro">Eliminar</button></td>
+                        <td>{{usuario.fechaIngreso?.toLocaleDateString('es-CL', { timeZone: 'America/Santiago' })
+                        }}</td>
+                        <td><button class="btn btn-outline-dark" v-on:click.prevent="eliminarregistro">Eliminar</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
@@ -81,9 +84,9 @@
                         <label for="cargo">Cargo:</label>
                         <select v-model="formulario.cargo" id="cargo" name="Cargo" required>
                             <option value="" disabled selected hidden>Selecciona un Cargo</option>
-                            <option value="arquitecto">Arquitecto</option>
-                            <option value="contructor">Contructor</option>
-                            <option value="albanir">Albañir</option>
+                            <option value="Arquitecto">Arquitecto</option>
+                            <option value="Contructor">Contructor</option>
+                            <option value="Albanir">Albañir</option>
                         </select>
                     </div>
                 </div>
@@ -103,16 +106,16 @@
                                 class="Error">{{erroresformulario.fechaNacimiento}}</small></p>
                     </div>
                 </div>
- 
 
-                <button v-on:click.prevent="enviarFormulario">Registrar</button>
+
+                <button class="btn btn-outline-dark" v-on:click.prevent="enviarFormulario">Registrar</button>
             </form>
         </section>
 
         <!-- Button trigger modal -->
         <button id="botonmodal" type="button" style="display: none;" class="btn btn-primary" data-bs-toggle="modal"
             data-bs-target="#exampleModal">
-            Launch demo modal
+            <!--Launch demo modal-->
         </button>
 
         <!-- Modal -->
@@ -133,11 +136,11 @@
                             <p>Fecha de Ingreso: <span>{{formulario.fechaIngreso}}</span></p>
                             <p>Fecha de Nacimiento: <span>{{formulario.fechaNacimiento}}</span></p>
                         </div>
-                        <button>confirmar</button>
+                        <!-- <button>confirmar</button>-->
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary"
+                        <!--<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>-->
+                         <button type="button" class="btn btn-primary"
                             v-on:click.prevent="guardarregistro">Guardar</button>
                     </div>
                 </div>
@@ -145,6 +148,14 @@
         </div>
 
         <footer>
+            <div class="footer-bottom_social">
+
+                <a href="https://www.youtube.com/" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+
+            </div>
             <p>&copy; 2024 Contructora transversal. Todos los derechos reservados.</p>
         </footer>
     </div>
