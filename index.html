@@ -63,7 +63,7 @@
                         <p v-if="erroresformulario?.nombre"><small class="Error">{{erroresformulario.nombre}}</small>
                         </p>
                     </div>
-
+                    
                     <div class="inputgroup">
                         <label for="apellido">Apellido:</label>
                         <input v-model="formulario.apellido" type="text" id="apellido" placeholder="Apellido"
@@ -72,7 +72,7 @@
                                 class="Error">{{erroresformulario.apellido}}</small></p>
                     </div>
                 </div>
-
+                
                 <div class="group">
                     <div class="inputgroup">
                         <label for="correo">Correo Electronico</label>
@@ -80,6 +80,7 @@
                             required>
                         <p v-if="erroresformulario?.email"><small class="Error">{{erroresformulario.email}}</small></p>
                     </div>
+                   
                     <div class="inputgroup">
                         <label for="cargo">Cargo:</label>
                         <select v-model="formulario.cargo" id="cargo" name="Cargo" required>
@@ -89,7 +90,8 @@
                             <option value="Albanir">Albañir</option>
                         </select>
                     </div>
-                </div>
+                    </div>
+                
                 <div class="group">
                     <div class="inputgroup">
                         <label for="fecha-ingreso">Fecha de Ingreso:</label>
@@ -98,6 +100,7 @@
                         <p v-if="erroresformulario?.fechaIngreso"><small
                                 class="Error">{{erroresformulario.fechaIngreso}}</small></p>
                     </div>
+                    
                     <div class="inputgroup">
                         <label for="fecha-nacimiento">Fecha Nacimiento:</label>
                         <input v-model="formulario.fechaNacimiento" type="date" id="fecha-nacimiento"
@@ -106,6 +109,7 @@
                                 class="Error">{{erroresformulario.fechaNacimiento}}</small></p>
                     </div>
                 </div>
+                
 
 
                 <button class="btn btn-outline-dark" v-on:click.prevent="enviarFormulario">Registrar</button>

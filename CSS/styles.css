@@ -69,3 +69,9 @@ td {
     
 
 }
+
+footer{
+    
+    position: absolute;
+    bottom: 20px;   
+}
